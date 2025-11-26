@@ -1,20 +1,36 @@
-mkdir lead-distribution-crm
-cd lead-distribution-crm
+# Инициализация Git репозитория
+git init
 
-mkdir app
-mkdir tests
+# Настройка пользователя (ОБЯЗАТЕЛЬНО!)
+git config user.email "thelelushlamberg@gmail.com"
+git config user.name "Lead Distribution CRM"
 
-touch requirements.txt
-touch Dockerfile
-touch docker-compose.yml
-touch README.md
-touch app/__init__.py
-touch app/main.py
-touch app/models.py
-touch app/schemas.py
-touch app/crud.py
-touch app/distribution.py
-touch app/database.py
-touch app/config.py
-touch tests/__init__.py
-touch tests/test_main.py
+# Проверка настроек
+git config --list
+
+# Добавление всех файлов в staging area
+git add .
+
+# Проверка что файлы добавлены
+git status
+
+# Создание первого коммита
+git commit -m "Initial commit: Complete Lead Distribution CRM
+
+Features:
+- FastAPI backend with SQLAlchemy ORM
+- Lead/Operator/Source models with relationships
+- Weight-based distribution algorithm with load limits
+- Complete REST API with endpoints for operators, sources, contacts, leads
+- Docker configuration
+- Comprehensive testing setup
+- Detailed documentation"
+
+# Добавление удаленного репозитория
+git remote add origin https://github.com/thelelushlamberg/lead-distribution-crm.git
+
+# Переименование основной ветки (если нужно)
+git branch -M main
+
+# Первая загрузка на GitHub
+git push -u origin main
